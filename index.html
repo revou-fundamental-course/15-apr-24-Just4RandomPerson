@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Konversi Suhu</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    
+    <heading><h1>Konversi Suhu</h1></heading>
+    <main>
+        <section class="bagian-konversi">
+            <article class="awal-deskripsi">
+                <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah,
+                    lalu klik tombol Konversi untuk mendapatkan hasil Konversi
+                    dalam bentuk Fahrenheit (&deg;F).
+                </p>
+            </article>
+            <form id="form">
+                <article class="celcius">
+                    <p id="text-awal-input">Celcius (&deg;C) :</p>
+                    <select onchange="change()">
+                        <option id="c">C</option>
+                        <option id="f">F</option>
+                    </select>
+                    <input type="number" id="celcius" required><br>
+                    <div id="button">
+                    <button class="convert" onclick="convert()">Convert</button>
+                    <button class="reset" onclick="reset()">Reset</button>
+                    </div>
+                </article>
+
+                <article class="fahrenheit">
+                    <p id="text-akhir-input">Fahrenheit (&deg;F) :</p>
+                    <input type="text" id="fahrenheit" disabled>
+                </article>
+
+                <article class="hasil-convert">
+                    <p>Cara Kalkulasi :</p>
+                    <input type="text" id="kalkulasi" disabled>
+                </article>
+            </form>
+        </section>
+
+        <section class="bagian-rumus">
+            <p id="judul-rumus">Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</p>
+            <hr>
+            <p id="deskripsi-rumus">Suhu <span class="huruf-s">S</span> dalam derajat Fahrenheit (&deg;F) sama 
+            dengan suhu <span class="huruf-s">S</span> dalam derajat Celcius (&deg;C) ke 9/5 tambah 32.</p>
+            <article>
+                <p id="rumus"><span class="huruf-s">S</span>(&deg;F) = (<span class="huruf-s">S</span>(&deg;C) x 9/5) + 32</p>
+            </article>
+        </section>
+    </main>
+    <script src="JS/script.js"></script>
 </body>
 </html>
